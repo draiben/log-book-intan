@@ -1,11 +1,12 @@
 const express = require("express");
+const loggedIn = require("../controllers/loggedin");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    if (req.user) {
+router.get("/", loggedIn, (req, res) => {
+    if (req.cookies.userLoggedIn) {
         res.render("index", { status: "LoggedIn", user: req.user });
     } else {
-        res.render("index", { status: "no", user: "nothing" });
+        res.render("login", { status: "no", user: "nothing" });
     }
 });
 

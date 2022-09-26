@@ -32,7 +32,7 @@ const register = async (req, res) => {
                     // Insert user to database
                     db.query("INSERT INTO users SET ?", { id_user: newId, nama: nama, email: email, password: Npassword }, async (error, result) => {
                         if (error) throw error;
-                        return res.json({ status: "success", success: "Email berhasil didaftarkan, Silahkan ", anchor: '<a href="Login">Login</a>' });
+                        return res.json({ status: "success", success: "Email berhasil didaftarkan, Silahkan login", anchor: '<a href="Login">Login</a>' });
                     });
                 });
             }

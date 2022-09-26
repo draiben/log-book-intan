@@ -20,11 +20,7 @@ form.addEventListener("submit", () => {
                 error.style.display = "none";
                 success.style.display = "block";
                 success.innerText = data.success;
-                setTimeout(home(), 3000);
+                window.location.href = "/";
             }
         });
 });
-
-function home() {
-    window.location.href = "/";
-}

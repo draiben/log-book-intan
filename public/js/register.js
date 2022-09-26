@@ -21,6 +21,7 @@ form.addEventListener("submit", () => {
                 error.style.display = "none";
                 success.style.display = "block";
                 success.innerText = data.success;
+                window.location.href = "/login";
             }
         });
 });
