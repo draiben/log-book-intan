@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    height: 22px;
+    width: 22px;
+    background-image: url("../assets/icon/ic-doe.png");
+    background-repeat: no-repeat;
+    background-position: 98%;
+}
+
+.section {
+    margin-top: 130px;
+}
+
+.heading-1 {
+    font-family: "Lora", serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.heading-2 {
+    font-family: "Lora", serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.p-m-light {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.p-m-medium {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.p-s-light {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.color-palette-1 {
+    color: #0c145a;
+}
+
+.btn-primary {
+    background-color: #695de9 !important;
+    font-size: 1.375rem !important;
+    font-weight: 600 !important;
+}
+
+.btn-secondary {
+    background-color: #e7eaf5 !important;
+    font-size: 1.375rem !important;
+    color: #0c145a !important;
+    border: none !important;
+}
+
+.btn-simpan {
+    padding: 12px 42px !important;
+}
+
+.navbar {
+    border-bottom: 1px solid #695de9;
+    height: 80px;
+}
+
+.navbar .navbar-brand {
+    font-family: "Lora", serif;
+    color: #0c145a;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.navbar .navbar-toggler {
+    border: none !important;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+    color: #695de9;
+}
+
+.navbar .offcanvas {
+    background-color: #1a1640;
+}
+
+.navbar .offcanvas .offcanvas-header .btn-closed {
+    cursor: pointer;
+}
+
+.navbar .offcanvas .offcanvas-body {
+    padding: 0;
+}
+
+.navbar .offcanvas .offcanvas-body .navbar-nav {
+    padding-right: 6rem !important;
+}
+
+.navbar .offcanvas .offcanvas-body .navbar-nav .nav-link {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0c145a;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+}
+
+input,
+textarea {
+    border-color: #695de9 !important;
+}
+
+label {
+    font-size: 22px !important;
+    color: #0c145a !important;
+    font-weight: 500 !important;
+}
+
+select {
+    border-color: #695de9 !important;
+}
+
+select,
+option {
+    font-size: 1rem !important;
+}

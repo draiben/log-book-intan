@@ -1,0 +1,30 @@
+.pencarian-data {
+    margin-top: 120px;
+}
+
+.pencarian-data .heading-2 {
+    color: #0c145a;
+}
+
+.pencarian-data .btn-primary {
+    padding: 12px 60px;
+}
+
+.table,
+th,
+td {
+    border-color: #695de9 !important;
+}
+
+.scrollfit {
+    overflow-y: scroll;
+    height: 300px;
+}
+
+.btn-table {
+    font-size: 0.8rem !important;
+}
+
+.btn-export {
+    padding: 12px 46px !important;
+}

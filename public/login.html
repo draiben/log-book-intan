@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+        <link rel="stylesheet" href="./css/utilities.css" />
+        <link rel="stylesheet" href="./css/login.css" />
+        <title>Log Book</title>
+    </head>
+    <body>
+        <!-- Section login -->
+        <section class="login mx-auto">
+            <!-- Background -->
+            <div class="bg-blue"></div>
+
+            <div class="container">
+                <div class="row row-height">
+                    <div class="col my-auto">
+                        <!-- Header -->
+                        <h1 class="heading-1 color-palette-1">
+                            Selamat Datang, <br />
+                            Di Log Book Spektrofotometer <br />
+                            UV-Vis
+                        </h1>
+                        <p class="p-detail p-m-light color-palette-1">
+                            Silahkan Masukkan Email <br />
+                            dan Password Anda
+                        </p>
+
+                        <!-- Form login -->
+                        <form onsubmit="return false;" id="form">
+                            <!-- Alert -->
+                            <div class="alert alert-danger" role="alert" id="error" style="display: none"></div>
+                            <div class="alert alert-success" role="alert" id="success" style="display: none"></div>
+
+                            <!-- Email -->
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <label for="exampleInputEmail1" class="p-m-medium form-label color-palette-1">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan email anda" />
+                                </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <label for="exampleInputPassword1" class="p-m-medium form-label color-palette-1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Masukkan password anda" />
+                                </div>
+                            </div>
+
+                            <!-- Forgot Password -->
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <a href="#" class="p-s-light forgot-password color-palette-1 d-block text-end">Forgot Password</a>
+                                </div>
+                            </div>
+
+                            <!-- Button submit -->
+                            <div class="row mb-2">
+                                <div class="col-9">
+                                    <button type="submit" class="btn btn-primary d-block" style="width: 100%">Sign In</button>
+                                </div>
+                            </div>
+
+                            <!-- Register -->
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="p-s-light color-palette-1 text-center">Don't have an account? <a href="/register" class="sign-up">Sign Up</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Gambar -->
+                    <div class="col my-auto">
+                        <img class="d-block ms-auto logo-arsip" src="/assets/images/logo-arsip.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="./js/login.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>

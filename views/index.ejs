@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/utilities.css" />
+        <link rel="stylesheet" href="/css/index.css" />
+        <title>Log Book</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <img src="./assets/icon/ic-hamburger.png" alt="" />
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header d-block ms-auto me-2 mb-4">
+                        <a class="btn-closed" data-bs-dismiss="offcanvas" aria-label="Close"><img src="./assets/icon/ic-close.png" alt="" /></a>
+                        <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"><img src="./assets/icon/ic-close.png" alt="" /></button> -->
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item">
+                                <a class="ps-3 nav-link active mb-4" aria-current="page" href="#">Arsip Log Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="ps-3 nav-link mb-4" href="#">Isi Log Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="ps-3 nav-link mb-4" href="#">Form Perbaikan Alat</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="navbar-brand d-block mx-auto" href="#">Arsip Penggunaan Spektrofotometer UV-Vis</a>
+            </div>
+        </nav>
+
+        <section class="section pencarian-data mb-5">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col">
+                        <h2 class="heading-2">Pencarian Data Arsip</h2>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-3">
+                        <label for="inputPassword6" class="col-form-label">Alat</label>
+                    </div>
+                    <div class="col-5">
+                        <input type="input" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-3">
+                        <label for="inputPassword6" class="col-form-label">Bulan dan Tahun</label>
+                    </div>
+                    <div class="col-5">
+                        <input type="date" id="inputPassword6" class="form-control date" aria-describedby="passwordHelpInline" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-8 text-end">
+                        <a class="btn btn-primary">Cari</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-table pt-3 mb-5">
+            <div class="container-fluid">
+                <div class="table-responsive mx-lg-5 scrollfit mb-5">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Nama Analis</th>
+                                <th scope="col">Jenis Pengujian</th>
+                                <th scope="col">Lambda</th>
+                                <th scope="col">Jenis Sampel</th>
+                                <th scope="col">Kode Sampel</th>
+                                <th scope="col">Tanggal Pemakaian</th>
+                                <th scope="col">Waktu Penggunaan</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Update</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Intan</td>
+                                <td>Fenol</td>
+                                <td>Lambda</td>
+                                <td>Sampel</td>
+                                <td>Kode</td>
+                                <td>21 Oktober 2022</td>
+                                <td>10:30 - 11:30</td>
+                                <td>Layak</td>
+                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Intan</td>
+                                <td>Fenol</td>
+                                <td>Lambda</td>
+                                <td>Sampel</td>
+                                <td>Kode</td>
+                                <td>21 Oktober 2022</td>
+                                <td>10:30 - 11:30</td>
+                                <td>Layak</td>
+                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Intan</td>
+                                <td>Fenol</td>
+                                <td>Lambda</td>
+                                <td>Sampel</td>
+                                <td>Kode</td>
+                                <td>21 Oktober 2022</td>
+                                <td>10:30 - 11:30</td>
+                                <td>Layak</td>
+                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Intan</td>
+                                <td>Fenol</td>
+                                <td>Lambda</td>
+                                <td>Sampel</td>
+                                <td>Kode</td>
+                                <td>21 Oktober 2022</td>
+                                <td>10:30 - 11:30</td>
+                                <td>Layak</td>
+                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Intan</td>
+                                <td>Fenol</td>
+                                <td>Lambda</td>
+                                <td>Sampel</td>
+                                <td>Kode</td>
+                                <td>21 Oktober 2022</td>
+                                <td>10:30 - 11:30</td>
+                                <td>Layak</td>
+                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Intan</td>
+                                <td>Fenol</td>
+                                <td>Lambda</td>
+                                <td>Sampel</td>
+                                <td>Kode</td>
+                                <td>21 Oktober 2022</td>
+                                <td>10:30 - 11:30</td>
+                                <td>Layak</td>
+                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Intan</td>
+                                <td>Fenol</td>
+                                <td>Lambda</td>
+                                <td>Sampel</td>
+                                <td>Kode</td>
+                                <td>21 Oktober 2022</td>
+                                <td>10:30 - 11:30</td>
+                                <td>Layak</td>
+                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Intan</td>
+                                <td>Fenol</td>
+                                <td>Lambda</td>
+                                <td>Sampel</td>
+                                <td>Kode</td>
+                                <td>21 Oktober 2022</td>
+                                <td>10:30 - 11:30</td>
+                                <td>Layak</td>
+                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row pb-5">
+                    <div class="col text-center">
+                        <a href="" class="btn btn-secondary btn-export">Export</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</html>

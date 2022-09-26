@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/utilities.css" />
+        <link rel="stylesheet" href="/css/login.css" />
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <!-- Section sign-up -->
+        <section class="sign-up mx-auto">
+            <!-- Background -->
+            <div class="bg-blue"></div>
+
+            <div class="container">
+                <div class="row row-height">
+                    <div class="col my-auto">
+                        <!-- Headers -->
+                        <h1 class="heading-1 color-palette-1">Create Account</h1>
+                        <p class="p-detail p-m-light color-palette-1">Silahkan isi form berikut</p>
+
+                        <!-- Form Register -->
+                        <form onsubmit="return false;" id="form">
+                            <!-- Alert -->
+                            <div class="alert alert-danger" role="alert" id="error" style="display: none"></div>
+                            <div class="alert alert-success" role="alert" id="success" style="display: none"></div>
+
+                            <!-- Nama -->
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <label for="nama" class="p-m-medium form-label color-palette-1">Nama</label>
+                                    <input type="input" class="form-control" id="nama" placeholder="Masukkan nama analis" />
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <label for="email" class="p-m-medium form-label color-palette-1">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Masukkan email anda" />
+                                </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="row mb-5">
+                                <div class="col-9">
+                                    <label for="password" class="p-m-medium form-label color-palette-1">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Masukkan password anda" />
+                                </div>
+                            </div>
+
+                            <!-- Button Sign-in -->
+                            <div class="row mb-2">
+                                <div class="col-9">
+                                    <button type="submit" style="width: 100%" class="btn btn-primary d-block">Sign Up</button>
+                                </div>
+                            </div>
+
+                            <!-- Sign-in/Login -->
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="p-s-light color-palette-1 text-center">Have an account? <a href="#" class="sign-up">Sign In</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col my-auto">
+                        <img class="d-block ms-auto logo-arsip" src="/assets/images/logo-arsip.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <script src="./js/register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</html>
