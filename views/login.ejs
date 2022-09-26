@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-        <link rel="stylesheet" href="./css/utilities.css" />
-        <link rel="stylesheet" href="./css/login.css" />
+        <link rel="stylesheet" href="/css/utilities.css" />
+        <link rel="stylesheet" href="/css/login.css" />
         <title>Log Book</title>
     </head>
     <body>
@@ -31,7 +31,7 @@
                         </p>
 
                         <!-- Form login -->
-                        <form onsubmit="return false;" id="form">
+                        <form onsubmit="return false" id="form">
                             <!-- Alert -->
                             <div class="alert alert-danger" role="alert" id="error" style="display: none"></div>
                             <div class="alert alert-success" role="alert" id="success" style="display: none"></div>
@@ -39,16 +39,16 @@
                             <!-- Email -->
                             <div class="row mb-3">
                                 <div class="col-9">
-                                    <label for="exampleInputEmail1" class="p-m-medium form-label color-palette-1">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan email anda" />
+                                    <label for="email" class="p-m-medium form-label color-palette-1">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email anda" />
                                 </div>
                             </div>
 
                             <!-- Password -->
                             <div class="row mb-3">
                                 <div class="col-9">
-                                    <label for="exampleInputPassword1" class="p-m-medium form-label color-palette-1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Masukkan password anda" />
+                                    <label for="password" class="p-m-medium form-label color-palette-1">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password anda" />
                                 </div>
                             </div>
 

@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const register = async (req, res) => {
     const { nama, email, password } = req.body;
 
-    if (!nama || !email || !password) return res.json({ status: "error", error: "Silahkan masukkan email dan password anda!" });
+    if (!nama || !email || !password) return res.json({ status: "error", error: "Mohon masukkan email dan password anda!" });
     else {
         db.query("SELECT email FROM users WHERE email = ?", [email], async (err, results) => {
             if (err) throw err;
@@ -25,11 +25,14 @@ const register = async (req, res) => {
                         var firstId = "A";
                         newId += String(firstId + getYear + ++incrementId);
                     }
-                    console.log(newId);
+
+                    // Hashing password
                     const Npassword = await bcrypt.hash(password, 8);
+
+                    // Insert user to database
                     db.query("INSERT INTO users SET ?", { id_user: newId, nama: nama, email: email, password: Npassword }, async (error, result) => {
                         if (error) throw error;
-                        return res.json({ status: "success", success: "Email berhasil didaftarkan" });
+                        return res.json({ status: "success", success: "Email berhasil didaftarkan, Silahkan ", anchor: '<a href="Login">Login</a>' });
                     });
                 });
             }

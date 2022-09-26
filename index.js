@@ -23,8 +23,8 @@ db.connect((err) => {
 });
 
 // Routing
-app.use("/", require("./routes/pages"));
 app.use("/api", require("./controllers/auth"));
+app.use("/", require("./routes/pages"));
 
 // Run server
 app.listen(PORT, () => {
