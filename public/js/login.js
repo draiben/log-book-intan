@@ -21,6 +21,9 @@ form.addEventListener("submit", () => {
                 success.style.display = "block";
                 success.innerText = data.success;
                 window.location.href = "/";
+                localStorage.setItem("namaAnalis", data.nama);
+                localStorage.setItem("namaAlat", data.namaAlat);
+                localStorage.setItem("id", data.id);
             }
         });
 });

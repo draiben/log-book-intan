@@ -19,7 +19,6 @@ app.use(express.json());
 // Connect to database
 db.connect((err) => {
     if (err) throw err;
-    console.log("Database connected");
 });
 
 // Routing
@@ -27,6 +26,4 @@ app.use("/api", require("./controllers/auth"));
 app.use("/", require("./routes/pages"));
 
 // Run server
-app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
-});
+app.listen(PORT);

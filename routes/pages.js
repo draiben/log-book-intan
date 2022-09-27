@@ -1,10 +1,10 @@
 const express = require("express");
-const loggedIn = require("../controllers/loggedin");
 const router = express.Router();
 
-router.get("/", loggedIn, (req, res) => {
-    if (req.cookies.userLoggedIn) {
-        res.render("index", { status: "LoggedIn", user: req.user });
+router.get("/", (req, res) => {
+    const checkUser = req.cookies.userLoggedIn;
+    if (checkUser) {
+        res.render("index", { status: "LoggedIn", nama: "asd" });
     } else {
         res.render("login", { status: "no", user: "nothing" });
     }
@@ -16,6 +16,10 @@ router.get("/register", (req, res) => {
 
 router.get("/login", (req, res) => {
     res.render("login", { status: "ok", message: "nothing" });
+});
+
+router.get("/insert-logbook", (req, res) => {
+    res.render("log-book");
 });
 
 module.exports = router;

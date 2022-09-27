@@ -24,19 +24,19 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item">
-                                <a class="ps-3 nav-link active mb-4" aria-current="page" href="#">Arsip Log Book</a>
+                                <a class="ps-3 nav-link active mb-4" aria-current="page" href="/">Arsip Log Book</a>
                             </li>
                             <li class="nav-item">
-                                <a class="ps-3 nav-link mb-4" href="#">Isi Log Book</a>
+                                <a class="ps-3 nav-link mb-4" href="/insert-logbook ">Isi Log Book</a>
                             </li>
                             <li class="nav-item">
-                                <a class="ps-3 nav-link mb-4" href="#">Form Perbaikan Alat</a>
+                                <a class="ps-3 nav-link mb-4" href="/perbaikan">Form Perbaikan Alat</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <a class="navbar-brand d-block mx-auto" href="#">Arsip Penggunaan Spektrofotometer UV-Vis</a>
-                <a href="/api/logout">Logout</a>
+                <a href="/api/logout" id="logout">Hello <span style="text-transform: capitalize" id="nama_analis"></span> </a>
             </div>
         </nav>
 
@@ -49,10 +49,10 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label for="inputPassword6" class="col-form-label">Alat</label>
+                        <label for="alat" class="col-form-label">Alat</label>
                     </div>
                     <div class="col-5">
-                        <input type="input" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" />
+                        <input type="input" id="alat" name="alat" class="form-control" aria-describedby="passwordHelpInline" />
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -198,5 +198,6 @@
         </section>
     </body>
 
+    <script src="./js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </html>
