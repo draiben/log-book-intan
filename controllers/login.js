@@ -21,12 +21,9 @@ const login = async (req, res) => {
                     if (e) throw e;
                     else {
                         res.cookie("userLoggedIn", token, cookieOptions);
+                        const id_alat = hasil[0].id_alat;
 
-                        const id = jwt.sign({ id_alat: hasil[0].id_alat, id_user: result[0].id_user }, process.env.JWT_SECRET, {
-                            expiresIn: process.env.JWT_EXPIRES,
-                        });
-
-                        return res.json({ status: "success", success: "Berhasil Login", nama: result[0].nama, namaAlat: hasil[0].nama_alat, id: id });
+                        return res.json({ status: "success", success: "Berhasil Login", nama: result[0].nama, namaAlat: hasil[0].nama_alat, id_alat: id_alat });
                     }
                 });
             }

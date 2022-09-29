@@ -23,7 +23,7 @@ form.addEventListener("submit", () => {
                 window.location.href = "/";
                 localStorage.setItem("namaAnalis", data.nama);
                 localStorage.setItem("namaAlat", data.namaAlat);
-                localStorage.setItem("id", data.id);
+                localStorage.setItem("id_alat", data.id_alat);
             }
         });
 });

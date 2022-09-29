@@ -47,27 +47,29 @@
                         <h2 class="heading-2">Pencarian Data Arsip</h2>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-3">
-                        <label for="alat" class="col-form-label">Alat</label>
+                <form onsubmit="return false" id="form">
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <label for="alat" class="col-form-label">Alat</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="input" id="alat" name="alat" class="form-control" aria-describedby="passwordHelpInline" />
+                        </div>
                     </div>
-                    <div class="col-5">
-                        <input type="input" id="alat" name="alat" class="form-control" aria-describedby="passwordHelpInline" />
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <label for="date" class="col-form-label">Bulan dan Tahun</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="date" id="date" name="date" class="form-control date" aria-describedby="passwordHelpInline" />
+                        </div>
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-3">
-                        <label for="inputPassword6" class="col-form-label">Bulan dan Tahun</label>
+                    <div class="row mb-3">
+                        <div class="col-8 text-end">
+                            <button type="submit" class="btn btn-primary">Cari</button>
+                        </div>
                     </div>
-                    <div class="col-5">
-                        <input type="date" id="inputPassword6" class="form-control date" aria-describedby="passwordHelpInline" />
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-8 text-end">
-                        <a class="btn btn-primary">Cari</a>
-                    </div>
-                </div>
+                </form>
             </div>
         </section>
 
@@ -90,6 +92,19 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <% if(data.length != 0 ){ var i = 1; data.forEach(element => { %>
+                            <tr>
+                                <th scope="row"><%= i %></th>
+                                <td><%= data.nama %></td>
+                                <td><%= data.jenis_pengujian %></td>
+                                <td><%= data.lamda %></td>
+                                <td><%= data.jenis_sampel %></td>
+                                <td><%= data.kode_sampel %></td>
+                                <td><%= data.tgl_pemakaian %></td>
+                                <td><%= data.waktu_mulai %> - <%= data.waktu_selesai %></td>
+                                <td><%= data.nama %></td>
+                            </tr>
+                            <% i++ })}; %>
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Intan</td>

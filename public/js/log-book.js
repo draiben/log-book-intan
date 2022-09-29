@@ -1,5 +1,6 @@
 const analis = localStorage.getItem("namaAnalis");
 const nama_alat = localStorage.getItem("namaAlat");
+const id = localStorage.getItem("id");
 
 const namaAnalis = document.getElementById("nama");
 namaAnalis.value = analis;
@@ -19,6 +20,7 @@ form.addEventListener("submit", () => {
         waktuMulai: waktuMulai.value,
         waktuSelesai: waktuSelesai.value,
         statusAlat: statusAlat.value,
+        id: id,
     };
     fetch("/api/insert-logbook", {
         method: "POST",
@@ -36,7 +38,7 @@ form.addEventListener("submit", () => {
             } else {
                 error.style.display = "none";
                 success.style.display = "block";
-                success.innerText = data.success;
+                success.innerText = data.message;
             }
         });
 });

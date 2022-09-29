@@ -4,7 +4,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
     const checkUser = req.cookies.userLoggedIn;
     if (checkUser) {
-        res.render("index", { status: "LoggedIn", nama: "asd" });
+        res.render("index", { data: [], status: "LoggedIn" });
     } else {
         res.render("login", { status: "no", user: "nothing" });
     }
@@ -19,7 +19,12 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/insert-logbook", (req, res) => {
-    res.render("log-book");
+    const checkUser = req.cookies.userLoggedIn;
+    if (checkUser) {
+        res.render("log-book");
+    } else {
+        res.redirect("/");
+    }
 });
 
 module.exports = router;
