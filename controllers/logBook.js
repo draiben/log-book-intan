@@ -5,10 +5,10 @@ const logBook = async (req, res) => {
     const { nama, alat, jenisPengujian, lamda, jenisSampel, kodeSampel, tglPemakaian, waktuMulai, waktuSelesai, statusAlat } = req.body;
     const id_alat = req.cookies.id_alat;
     const id_user = req.cookies.userLoggedIn;
+    const getYear = new Date().getFullYear();
+    const bulan_tahun = tglPemakaian.substring(0, 7);
 
-    const date = new Date(tglPemakaian).getTime();
-
-    console.log(date);
+    console.log(bulan_tahun);
 
     const decodedUser = jwt.verify(id_user, process.env.JWT_SECRET);
 
@@ -21,7 +21,6 @@ const logBook = async (req, res) => {
             if (e) throw e;
             else {
                 // Get year
-                const getYear = new Date().getFullYear();
                 var id_pengujian = "";
 
                 // Cek ID
@@ -33,7 +32,6 @@ const logBook = async (req, res) => {
                     var firstId = "T";
                     id_pengujian += String(firstId + getYear + ++incrementId);
                 }
-
                 db.query(
                     "INSERT INTO pengujian SET ?",
                     {
@@ -44,14 +42,15 @@ const logBook = async (req, res) => {
                         lamda: lamda,
                         jenis_sampel: jenisSampel,
                         kode_sampel: kodeSampel,
-                        tgl_pemakaian: date,
+                        tgl_pemakaian: tglPemakaian,
+                        bulan_tahun: bulan_tahun,
                         waktu_mulai: waktuMulai,
                         waktu_selesai: waktuSelesai,
                     },
-                    async (error, result) => {
+                    async (error, hasil) => {
                         if (error) return res.json({ status: "error", message: "Data tidak dapat disimpan" });
                         else {
-                            return res.json({ status: "success", message: "Data telah tersimpan" });
+                            return res.json({ status: "success", message: "Data berhasil disimpan" });
                         }
                     }
                 );
