@@ -8,11 +8,7 @@ const logBook = async (req, res) => {
     const getYear = new Date().getFullYear();
     const bulan_tahun = tglPemakaian.substring(0, 7);
 
-    console.log(bulan_tahun);
-
     const decodedUser = jwt.verify(id_user, process.env.JWT_SECRET);
-
-    console.log(decodedUser);
 
     if (!nama || !alat || !jenisPengujian || !lamda || !jenisSampel || !kodeSampel || !tglPemakaian || !waktuMulai || !waktuSelesai || !statusAlat) {
         return res.json({ status: "error", error: "Data tidak boleh kosong" });

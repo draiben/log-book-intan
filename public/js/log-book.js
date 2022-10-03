@@ -76,3 +76,11 @@ form.addEventListener("submit", () => {
             }
         });
 });
+
+const d = new Date();
+var hari = ("0" + d.getDate()).slice(-2);
+var bulan = ("0" + (d.getMonth() + 1)).slice(-2);
+var tahun = d.getFullYear();
+var fullDate = tahun + "-" + bulan + "-" + hari;
+
+document.getElementById("tglPemakaian").value = fullDate;

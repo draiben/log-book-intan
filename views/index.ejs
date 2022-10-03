@@ -53,7 +53,7 @@
                             <label for="alat" class="col-form-label">Alat</label>
                         </div>
                         <div class="col-5">
-                            <input type="input" id="alat" name="alat" class="form-control" aria-describedby="passwordHelpInline" />
+                            <input type="input" id="alat" name="alat" class="form-control" />
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -61,7 +61,7 @@
                             <label for="date" class="col-form-label">Bulan dan Tahun</label>
                         </div>
                         <div class="col-5">
-                            <input type="date" id="date" name="date" class="form-control date" aria-describedby="passwordHelpInline" />
+                            <input type="month" id="date" name="date" class="form-control date" />
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -91,7 +91,7 @@
                                 <th scope="col">Update</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="data-table">
                             <% if(data.length != 0 ){ var i = 1; data.forEach(element => { %>
                             <tr>
                                 <th scope="row"><%= i %></th>
@@ -104,8 +104,8 @@
                                 <td><%= data.waktu_mulai %> - <%= data.waktu_selesai %></td>
                                 <td><%= data.nama %></td>
                             </tr>
-                            <% i++ })}; %>
-                            <tr>
+                            <% i++ })} %>
+                            <!-- <tr>
                                 <th scope="row">1</th>
                                 <td>Intan</td>
                                 <td>Fenol</td>
@@ -116,91 +116,7 @@
                                 <td>10:30 - 11:30</td>
                                 <td>Layak</td>
                                 <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Intan</td>
-                                <td>Fenol</td>
-                                <td>Lambda</td>
-                                <td>Sampel</td>
-                                <td>Kode</td>
-                                <td>21 Oktober 2022</td>
-                                <td>10:30 - 11:30</td>
-                                <td>Layak</td>
-                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Intan</td>
-                                <td>Fenol</td>
-                                <td>Lambda</td>
-                                <td>Sampel</td>
-                                <td>Kode</td>
-                                <td>21 Oktober 2022</td>
-                                <td>10:30 - 11:30</td>
-                                <td>Layak</td>
-                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Intan</td>
-                                <td>Fenol</td>
-                                <td>Lambda</td>
-                                <td>Sampel</td>
-                                <td>Kode</td>
-                                <td>21 Oktober 2022</td>
-                                <td>10:30 - 11:30</td>
-                                <td>Layak</td>
-                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Intan</td>
-                                <td>Fenol</td>
-                                <td>Lambda</td>
-                                <td>Sampel</td>
-                                <td>Kode</td>
-                                <td>21 Oktober 2022</td>
-                                <td>10:30 - 11:30</td>
-                                <td>Layak</td>
-                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Intan</td>
-                                <td>Fenol</td>
-                                <td>Lambda</td>
-                                <td>Sampel</td>
-                                <td>Kode</td>
-                                <td>21 Oktober 2022</td>
-                                <td>10:30 - 11:30</td>
-                                <td>Layak</td>
-                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>Intan</td>
-                                <td>Fenol</td>
-                                <td>Lambda</td>
-                                <td>Sampel</td>
-                                <td>Kode</td>
-                                <td>21 Oktober 2022</td>
-                                <td>10:30 - 11:30</td>
-                                <td>Layak</td>
-                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td>Intan</td>
-                                <td>Fenol</td>
-                                <td>Lambda</td>
-                                <td>Sampel</td>
-                                <td>Kode</td>
-                                <td>21 Oktober 2022</td>
-                                <td>10:30 - 11:30</td>
-                                <td>Layak</td>
-                                <td><a href="" class="btn btn-secondary btn-table">Update</a></td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
