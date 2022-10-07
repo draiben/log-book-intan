@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const historiPerbaikan = require("./historiPerbaikan");
+
 router.get("/", (req, res) => {
     const checkUser = req.cookies.userLoggedIn;
     if (checkUser) {
@@ -35,5 +37,7 @@ router.get("/perbaikan", (req, res) => {
         res.redirect("/");
     }
 });
+
+router.get("/histori-perbaikan", historiPerbaikan);
 
 module.exports = router;
