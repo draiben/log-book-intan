@@ -27,4 +27,13 @@ router.get("/insert-logbook", (req, res) => {
     }
 });
 
+router.get("/perbaikan", (req, res) => {
+    const checkUser = req.cookies.userLoggedIn;
+    if (checkUser) {
+        res.render("form-perbaikan");
+    } else {
+        res.redirect("/");
+    }
+});
+
 module.exports = router;

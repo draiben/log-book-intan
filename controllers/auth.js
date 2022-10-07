@@ -6,6 +6,7 @@ const register = require("./register");
 const login = require("./login");
 const logout = require("./logout");
 const home = require("./home");
+const perbaikan = require("./perbaikan");
 
 // LogBook
 const logBook = require("./logBook");
@@ -15,10 +16,8 @@ router.post("/register", register);
 router.post("/login", login);
 router.get("/logout", logout);
 
-// router Logbook
 router.post("/insert-logbook", logBook);
-
-// Home
 router.post("/", home);
+router.post("/perbaikan", perbaikan);
 
 module.exports = router;

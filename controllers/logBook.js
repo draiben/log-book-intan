@@ -42,6 +42,7 @@ const logBook = async (req, res) => {
                         bulan_tahun: bulan_tahun,
                         waktu_mulai: waktuMulai,
                         waktu_selesai: waktuSelesai,
+                        status_alat: statusAlat,
                     },
                     async (error, hasil) => {
                         if (error) return res.json({ status: "error", message: "Data tidak dapat disimpan" });

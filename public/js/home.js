@@ -3,7 +3,7 @@ var table = document.getElementById("data-table");
 var row = table.insertRow();
 row.id = "row-1";
 var cell1 = row.insertCell(0);
-cell1.colSpan = 10;
+cell1.colSpan = 9;
 cell1.innerText = "Nothing here";
 
 // Form
@@ -43,7 +43,6 @@ form.addEventListener("submit", () => {
                 var cell7 = row.insertCell(6);
                 var cell8 = row.insertCell(7);
                 var cell9 = row.insertCell(8);
-                var cell10 = row.insertCell(9);
                 cell1.innerText = index + 1;
                 cell2.innerText = item.nama;
                 cell3.innerText = item.jenis_pengujian;
@@ -53,7 +52,6 @@ form.addEventListener("submit", () => {
                 cell7.innerText = item.tgl_pemakaian;
                 cell8.innerText = item.waktu_mulai + "-" + item.waktu_selesai;
                 cell9.innerText = item.status_alat;
-                cell10.innerText = "Update";
             });
         });
 });

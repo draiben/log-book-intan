@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/utilities.css" />
+        <title>Form Perbaikan</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <img src="./assets/icon/ic-hamburger.png" alt="" />
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header d-block ms-auto me-2 mb-4">
+                        <a class="btn-closed" data-bs-dismiss="offcanvas" aria-label="Close"><img src="../assets/icon/ic-close.png" alt="" /></a>
+                        <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"><img src="../assets/icon/ic-close.png" alt="" /></button> -->
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item">
+                                <a class="ps-3 nav-link active mb-4" aria-current="page" href="/">Arsip Log Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="ps-3 nav-link mb-4" href="/insert-logbook">Isi Log Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="ps-3 nav-link mb-4" href="/perbaikan">Form Perbaikan Alat</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="navbar-brand d-block mx-auto" href="#">Form Perbaikan Spektrofotometer UV-Vis</a>
+            </div>
+        </nav>
+
+        <section class="section perbaikan">
+            <div class="container">
+                <form onsubmit="return false" id="form">
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <label for="nama" class="col-form-label">Nama Analis</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="input" id="nama" name="nama" class="form-control" aria-describedby="passwordHelpInline" />
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <label for="tglPerbaikan" class="col-form-label">Tanggal Pemakaian</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="date" id="tglPerbaikan" name="tglPerbaikan" class="form-control date" aria-describedby="passwordHelpInline" required />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <label for="tindakan" class="col-form-label">Tindakan Perbaikan Alat</label>
+                        </div>
+                        <div class="col-5">
+                            <textarea class="form-control" id="tindakan" name="tindakan" placeholder="Masukan tindakan" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <label for="jenisPerbaikan" class="col-form-label">Jenis Perbaikan</label>
+                        </div>
+                        <div class="col-5">
+                            <select class="form-select form-select-lg mb-3" id="jenisPerbaikan" name="jenisPerbaikan" aria-label=".form-select-lg example">
+                                <option value="uji kinerja" selected>uji kinerja</option>
+                                <option value="kalibrasi">kalibrasi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <label for="statusAlat" class="col-form-label">Status Alat</label>
+                        </div>
+                        <div class="col-5">
+                            <select class="form-select form-select-lg mb-3" id="statusAlat" name="statusAlat" aria-label=".form-select-lg example">
+                                <option value="Layak" selected>Layak</option>
+                                <option value="Tidak Layak">Tidak layak</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-8 text-end">
+                            <button type="submit" class="btn btn-primary btn-simpan" data-bs-toggle="modal" data-bs-target="#modal">Simpan</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="message"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <script src="./js/perbaikan.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</html>
