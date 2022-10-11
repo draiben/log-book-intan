@@ -11,6 +11,26 @@
         <title>Log Book</title>
     </head>
     <body>
+        <!-- The Modal -->
+        <% if(status == "tidak layak"){ %>
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="mb-3">Status Alat</h3>
+                <div class="alert alert-danger" role="alert"><%= message %></div>
+            </div>
+        </div>
+        <% } %> <% if(status == "perlu diperbaiki"){ %>
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="mb-3">Status Alat</h3>
+                <div class="alert alert-warning" role="alert"><%= message %></div>
+            </div>
+        </div>
+        <% } %>
         <nav class="navbar navbar-light bg-light fixed-top">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">

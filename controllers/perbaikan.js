@@ -19,7 +19,7 @@ const perbaikan = async (req, res) => {
     if (!nama || !tglPerbaikan || !tindakan || !jenisPerbaikan || !statusAlat) {
         return res.json({ status: "error", message: "Data tidak boleh kosong" });
     } else {
-        db.query("SELECT max(`id_perbaikan`) as maxId FROM `perbaikan`", async (err, result) => {
+        db.query("SELECT max(CAST((substring(id_perbaikan, 6)) AS DECIMAL)) as maxId FROM `perbaikan`", async (err, result) => {
             if (err) throw err;
             else {
                 // Get year
@@ -31,9 +31,8 @@ const perbaikan = async (req, res) => {
                     idPerbaikan += String("F" + getYear + 1);
                 } else {
                     var oldId = result[0].maxId;
-                    var incrementId = oldId.substring(5);
                     var firstId = "F";
-                    idPerbaikan += String(firstId + getYear + ++incrementId);
+                    idPerbaikan += String(firstId + getYear + ++oldId);
                 }
 
                 db.query(

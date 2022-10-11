@@ -55,14 +55,14 @@
                         <div class="col-3">
                             <label for="nama" class="col-form-label">Nama Analis</label>
                         </div>
-                        <div class="col-5"><input type="input" id="nama" name="nama" class="form-control" disabled aria-describedby="passwordHelpInline" required /></div>
+                        <div class="col-5"><input type="input" id="nama" name="nama" class="form-control" disabled aria-describedby="passwordHelpInline" /></div>
                     </div>
                     <div class="row mb-2">
                         <div class="col-3">
                             <label for="alat" class="col-form-label">Alat</label>
                         </div>
                         <div class="col-5">
-                            <input type="input" id="alat" name="alat" class="form-control" disabled aria-describedby="passwordHelpInline" required />
+                            <input type="input" id="alat" name="alat" class="form-control" disabled aria-describedby="passwordHelpInline" />
                         </div>
                     </div>
                     <div class="row mb-2">
@@ -70,7 +70,7 @@
                             <label for="jenisPengujian" class="col-form-label">Jenis Pengujian</label>
                         </div>
                         <div class="col-5">
-                            <select class="form-select form-select-lg mb-3" onchange="optionJenisPengujian(event)" id="jenisPengujian" name="jenisPengujian" aria-label=".form-select-lg example" required>
+                            <select class="form-select form-select-lg mb-3" onchange="optionJenisPengujian(event)" id="jenisPengujian" name="jenisPengujian" aria-label=".form-select-lg example">
                                 <option value="Warna" selected>Warna</option>
                                 <option value="Fenol">Fenol</option>
                                 <option value="COD">COD</option>
@@ -87,7 +87,7 @@
                             <label for="lamda" class="col-form-label">Lamda</label>
                         </div>
                         <div class="col-5">
-                            <input type="input" id="lamda" name="lamda" class="form-control" aria-describedby="passwordHelpInline" placeholder="Masukkan lamda" required />
+                            <input type="number" id="lamda" name="lamda" class="form-control" aria-describedby="passwordHelpInline" placeholder="Masukkan lamda" />
                         </div>
                     </div>
                     <div class="row mb-2">
@@ -95,7 +95,7 @@
                             <label for="jenisSampel" class="col-form-label">Jenis Sampel</label>
                         </div>
                         <div class="col-5">
-                            <select class="form-select form-select-lg mb-3" onchange="optionJenisSampel(event)" id="jenisSampel" name="jenisSampel" aria-label=".form-select-lg example" required>
+                            <select class="form-select form-select-lg mb-3" onchange="optionJenisSampel(event)" id="jenisSampel" name="jenisSampel" aria-label=".form-select-lg example">
                                 <option value="Air limbah industri" selected>Air limbah industri</option>
                                 <option value="Air limbah farmasi">Air limbah farmasi</option>
                                 <option value="Air limbah industri kertas">Air limbah industri kertas</option>
@@ -109,7 +109,7 @@
                             <label for="kodeSampel" class="col-form-label">Kode Sampel</label>
                         </div>
                         <div class="col-5">
-                            <input type="input" id="kodeSampel" name="kodeSampel" class="form-control" aria-describedby="passwordHelpInline" placeholder="Masukan kode sampel" required />
+                            <input type="number" id="kodeSampel" name="kodeSampel" class="form-control" aria-describedby="passwordHelpInline" placeholder="Masukan kode sampel" />
                         </div>
                     </div>
                     <div class="row mb-2">
@@ -117,7 +117,7 @@
                             <label for="tglPemakaian" class="col-form-label">Tanggal Pemakaian</label>
                         </div>
                         <div class="col-5">
-                            <input type="date" id="tglPemakaian" name="tglPemakaian" class="form-control date" aria-describedby="passwordHelpInline" required />
+                            <input type="date" id="tglPemakaian" name="tglPemakaian" class="form-control date" aria-describedby="passwordHelpInline" />
                         </div>
                     </div>
                     <div class="row mb-2">
@@ -125,13 +125,13 @@
                             <label for="waktuPemakaian" class="col-form-label">Waktu Pemakaian</label>
                         </div>
                         <div class="col-2">
-                            <input type="time" value="10:30" id="waktuMulai" name="waktuMulai" class="form-control date" aria-describedby="passwordHelpInline" required />
+                            <input type="time" value="10:30" id="waktuMulai" name="waktuMulai" class="form-control date" aria-describedby="passwordHelpInline" />
                         </div>
                         <div class="col-1 text-center my-auto">
                             <img src="/assets/icon/Line.png" alt="" />
                         </div>
                         <div class="col-2">
-                            <input type="time" value="11:30" id="waktuSelesai" name="waktuSelesai" class="form-control date" aria-describedby="passwordHelpInline" required />
+                            <input type="time" value="11:30" id="waktuSelesai" name="waktuSelesai" class="form-control date" aria-describedby="passwordHelpInline" />
                         </div>
                     </div>
                     <div class="row mb-2">
@@ -139,7 +139,7 @@
                             <label for="statusAlat" class="col-form-label">Status Alat</label>
                         </div>
                         <div class="col-5">
-                            <select class="form-select form-select-lg mb-3" id="statusAlat" name="statusAlat" aria-label=".form-select-lg example" required>
+                            <select class="form-select form-select-lg mb-3" id="statusAlat" name="statusAlat" aria-label=".form-select-lg example">
                                 <option selected>Layak</option>
                                 <option value="1">Tidak layak</option>
                             </select>
@@ -157,7 +157,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="titleModal"></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body" id="message"></div>

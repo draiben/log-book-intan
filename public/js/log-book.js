@@ -28,6 +28,9 @@ function optionJenisSampel(e) {
     }
 }
 
+var string = 123;
+console.log(typeof string);
+
 form.addEventListener("submit", () => {
     var jenisSampel = "";
     var jenisPengujian = "";
@@ -68,11 +71,14 @@ form.addEventListener("submit", () => {
                 success.style.display = "none";
                 error.style.display = "block";
                 error.innerText = data.error;
+                titleModal.innerText = "Error";
+                message.innerText = data.error;
             } else {
                 error.style.display = "none";
                 success.style.display = "block";
-                success.innerText = data.message;
-                message.innerText = data.message;
+                success.innerText = data.success;
+                titleModal.innerText = "Success";
+                message.innerText = data.success;
             }
         });
 });

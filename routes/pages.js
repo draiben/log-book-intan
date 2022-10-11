@@ -2,15 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const historiPerbaikan = require("./historiPerbaikan");
+const home = require("./home");
 
-router.get("/", (req, res) => {
-    const checkUser = req.cookies.userLoggedIn;
-    if (checkUser) {
-        res.render("index", { data: [], status: "LoggedIn" });
-    } else {
-        res.render("login", { status: "no", user: "nothing" });
-    }
-});
+router.get("/", home);
 
 router.get("/register", (req, res) => {
     res.sendFile("register.html", { root: "./public/" });

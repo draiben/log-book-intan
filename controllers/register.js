@@ -11,7 +11,7 @@ const register = async (req, res) => {
             if (results[0]) return res.json({ status: "error", error: "Email telah terdaftar" });
             else {
                 // Menambahkan ID autoincrement
-                db.query("SELECT max(`id_user`) as maxId FROM `users`", async (err, result) => {
+                db.query("SELECT max(CAST((substring(id_user,6)) AS DECIMAL)) AS maxId FROM `users`", async (err, result) => {
                     if (err) throw err;
                     else {
                         // Get year
@@ -23,9 +23,8 @@ const register = async (req, res) => {
                             newId += String("A" + getYear + 1);
                         } else {
                             var oldId = result[0].maxId;
-                            var incrementId = oldId.substring(5);
                             var firstId = "A";
-                            newId += String(firstId + getYear + ++incrementId);
+                            newId += String(firstId + getYear + ++oldId);
                         }
 
                         // Hashing password
