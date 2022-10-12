@@ -7,7 +7,7 @@ const home = async (req, res) => {
         db.query("SELECT * FROM jenis_perbaikan", async (error, results) => {
             if (error) throw error;
             else {
-                const dateNow = new Date("2024-10-09").getTime();
+                const dateNow = new Date().getTime();
 
                 // Uji Kinerja
                 var tglKinerja = new Date(results[0].tgl_perbaikan);
@@ -55,7 +55,7 @@ const home = async (req, res) => {
                     res.render("index", { status: "tidak layak", message: "Alat tidak layak, lakukan uji kinerja pada alat" });
                 } else if (dateNow >= nextKalibrasi || waktuPakai >= 2952000) {
                     res.render("index", { status: "tidak layak", message: "Alat tidak layak, lakukan kalibrasi pada alat" });
-                } else if (getDiffDay < 7) {
+                } else if (getDiffDay < 7 && status) {
                     res.render("index", { status: "perlu diperbaiki", message: `Alat perlu diperbaiki, lakukan ${status} pada alat segera` });
                 } else {
                     res.render("index", { status: "layak", message: "Alat layak digunakan" });
