@@ -58,7 +58,7 @@
                             </tr>
                         </thead>
                         <tbody id="data-table">
-                            <% if(histori.length != 0){ var i = 1; reverseHistori = histori.reverse(); reverseHistori.forEach((data)=>{ %>
+                            <% if(histori.length != 0){ var i = 1; histori.forEach((data)=>{ %>
                             <tr>
                                 <td><%= i; %></td>
                                 <td><%= data.nama; %></td>

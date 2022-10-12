@@ -84,3 +84,31 @@ var tahun = tanggal.getFullYear();
 var bulanTahun = tahun + "-" + bulan;
 
 document.getElementById("date").value = bulanTahun;
+
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+// Export table to excel
+function ExportToExcel(type, fn, dl) {
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    var format = day + "-" + month + "-" + year;
+
+    var elt = document.getElementById("data_arsip");
+    var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+    return dl ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" }) : XLSX.writeFile(wb, fn || `arsip ${format}.` + (type || "xlsx"));
+}

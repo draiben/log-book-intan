@@ -20,6 +20,8 @@ const logBook = async (req, res) => {
 
     if (!nama || !alat || !jenisPengujian || !lamda || !jenisSampel || !kodeSampel || !tglPemakaian || !waktuMulai || !waktuSelesai || !statusAlat) {
         return res.json({ status: "error", error: "Data tidak boleh kosong" });
+    } else if (waktuPemakaian == 0 || secondSelesai < secondMulai) {
+        return res.json({ status: "error", error: "Data waktu pemakaian salah" });
     } else {
         db.query("select max(CAST((substring(id_pengujian,6)) AS DECIMAL)) AS maxId from pengujian;", async (e, result) => {
             if (e) return res.json({ status: "error", error: "Kesalahan sistem!" });
